@@ -1,0 +1,9 @@
+C:\Users\Ken\source\repos\ticketAppV2\LunarKitsune\LamdaDelegateExample\DelegateLamdaRepo\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\Ken\source\repos\ticketAppV2\LunarKitsune\LamdaDelegateExample\DelegateLamdaRepo\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\Ken\source\repos\ticketAppV2\LunarKitsune\LamdaDelegateExample\DelegateLamdaRepo\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\Ken\source\repos\ticketAppV2\LunarKitsune\LamdaDelegateExample\DelegateLamdaRepo\WindowsFormsApp1\obj\Debug\DelegatesAndLamdas.csprojAssemblyReference.cache
+C:\Users\Ken\source\repos\ticketAppV2\LunarKitsune\LamdaDelegateExample\DelegateLamdaRepo\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\Ken\source\repos\ticketAppV2\LunarKitsune\LamdaDelegateExample\DelegateLamdaRepo\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\Ken\source\repos\ticketAppV2\LunarKitsune\LamdaDelegateExample\DelegateLamdaRepo\WindowsFormsApp1\obj\Debug\DelegatesAndLamdas.csproj.GenerateResource.cache
+C:\Users\Ken\source\repos\ticketAppV2\LunarKitsune\LamdaDelegateExample\DelegateLamdaRepo\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\Ken\source\repos\ticketAppV2\LunarKitsune\LamdaDelegateExample\DelegateLamdaRepo\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb

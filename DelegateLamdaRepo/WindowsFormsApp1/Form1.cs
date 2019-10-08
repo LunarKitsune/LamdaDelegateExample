@@ -18,6 +18,20 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
+        /*
+         *  Delegates: A Type safe pointer to a function with a matching signature. 
+         *  
+         *  Delegates are declared using the delegate key word. 
+         * 
+         *  There are a couple of good things to know about delegates:
+         *      *You can either go by the parameters if you are just inserting variables
+         *      
+         *      *if you go with LINQ expressions with delegates, parameter must be a matching signature
+         *     to the delegate parameters (delegate parameters are int int, parameters are int int)
+         *      
+         *      
+         */ 
+
         #region Delegates
         private delegate int doCalc(int numberOne, int numberTwo); //First Delegate
 
@@ -53,12 +67,18 @@ namespace WindowsFormsApp1
         private void BtnLamda_Click(object sender, EventArgs e)
         {
             rtbOutput.Clear();
-            squareNum sqareThis = x => x * x;
+
+            //Here squareNum is declared here. It expects an integer
+            //(recall delegate int squareNum(int number) where number is an parameter
+            squareNum squareThis = x => x * x;
+
+            //we declare firstNumber here wich will be being put in place to the parameter
             int firstNumber;
 
             if (int.TryParse(txtNumOneInput.Text, out firstNumber) == true)
             {
-                rtbOutput.Text = $"This number squared from number 1 text box is {sqareThis(firstNumber)}";
+                //we call square this as: delegate[Parameter to insert] to get the result
+                rtbOutput.Text = $"This number squared from number 1 text box is {squareThis(firstNumber)}";
             }
             else
             {
@@ -71,10 +91,24 @@ namespace WindowsFormsApp1
         {
             rtbOutput.Clear();
 
+            //Here we define getSquareArea delegate "getArea"
+
+            //Recall the delegate is defined as: getSquareArea(double x double Y)
+
+            //In order to insert two parameters we define get area and then after the equals sign
+            //and make up the paramaters double a, and double b, and how they will be interacting after
+            //the LINQ expression.
+
+            //This basically says with get area using double a and b, Multiply both the parameters by each othr
+            //to get a result. 
             getSquareArea getArea = (double a, double b) => a * b;
 
+            //These will be the parameters to be inserted
             int length = 20, width = 10;
 
+
+            //Same as the squareNum example, the delegate pointer is insterted(getArea)
+            //with the parameter inserts of length, and width.
             rtbOutput.Text = $"Area using 20ft * 10ft is {getArea(length, width)}";
 
         }
@@ -90,8 +124,14 @@ namespace WindowsFormsApp1
                 numbers.Add(i);
             }
 
+            //variable used for the conditional statement in the upcoming LINQ statement
             int high = 5;
 
+            //This is a general LINQ expression. this is used to enumerate over a list. 
+            //In this method a list of numbers is generated in a for loop making numbers 1 - 10
+
+            //This expression will become a list essentially saying
+            //collected numbers x where x in numbers list is heigher than 5.
             var greaterThan = numbers.Where(x => x > high);
 
             rtbOutput.Text = $"These are the numbers greater than 5:\n{"".PadRight(25, '*')}\r\n";
@@ -104,6 +144,8 @@ namespace WindowsFormsApp1
 
         #endregion buttons
 
+
+        //FUNCTIONS meant to go into the delegate pointers for demonstration
         #region general form functions
 
         private int addNums(int integer1, int integer2)
@@ -115,9 +157,6 @@ namespace WindowsFormsApp1
         {
             return integer1 - integer2;
         }
-
-        private int 
-
         #endregion general form functions
     }
 }
