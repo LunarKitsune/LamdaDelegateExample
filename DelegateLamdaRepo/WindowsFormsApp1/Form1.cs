@@ -52,8 +52,8 @@ namespace WindowsFormsApp1
             //Here we instantiate doCalc and point to the methods AddNums, and subtract respectively with delegate b and c
             
             //Recal that doCalc requires parameters int, int. ( delegate doCalc(int number1, int number2) )
-            doCalc b = new doCalc(addNums);
-            doCalc c = new doCalc(Subtract);
+            doCalc b = addNums;
+            doCalc c = Subtract;
             
             if(int.TryParse(txtNumOneInput.Text, out firstNumber) == true && int.TryParse(txtNum2Input.Text, out secondnumber) == true)
             {
