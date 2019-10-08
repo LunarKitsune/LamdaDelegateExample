@@ -46,14 +46,27 @@ namespace WindowsFormsApp1
         {
             rtbOutput.Text = string.Empty;
 
+            //Parameters to be used within the delegate  instantiations.
             int firstNumber, secondnumber;
+            
+            //Here we instantiate doCalc and point to the methods AddNums, and subtract respectively with delegate b and c
+            
+            //Recal that doCalc requires parameters int, int. ( delegate doCalc(int number1, int number2) )
             doCalc b = new doCalc(addNums);
             doCalc c = new doCalc(Subtract);
             
             if(int.TryParse(txtNumOneInput.Text, out firstNumber) == true && int.TryParse(txtNum2Input.Text, out secondnumber) == true)
             {
+                //Here when we need to call the delegates and run them for a result its essentially this
+                //you call your instantiaton of your delegate in this case b, and then insert parameters that would've been
+                //inserted into the provided methods otherwise.
+                
+                //delegateVariable[method parameters of method provided]
+                //equivalant to addNums(firstNumber, secondNumber)
                 rtbOutput.Text = $"Adding Numbers: {b(firstNumber, secondnumber)}\r\n";
-
+                
+                //Same thing here for delegate b, but doing this for c with the subtract method rather than the addNums
+                //Method
                 rtbOutput.Text = $"Subtracting Numbers: {c(firstNumber, secondnumber)}";
                 
             }
